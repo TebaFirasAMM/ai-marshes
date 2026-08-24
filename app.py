@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st   
 import random
 
 # 1. Page Configuration for a Professional Medical Interface
@@ -71,11 +71,10 @@ elif page == "📊 AI Predictive System":
                 st.metric(label="⚠️ Embryonic Cytotoxicity Evaluation", value=risk_level)
             
             st.markdown("---")
-            st.subheader("🧠 AI Genomic Analytics & Predictive Report:")
-            st.write(f"▪️ Predicted Embryonic Membrane Penetration Probability: {toxicity_score}%")
+            st.subheader("🧠 AI Genomic Analytics & Predictive Report:"
+                         st.write(f"▪ *Predicted Embryonic Membrane Penetration Probability:* {toxicity_score}%")
             
             if toxicity_score > 70:
-                st.warning("⚠️ Clinical Recommendation: This bacterial strain exhibits a hyper-mu
- tated genomic signature that poses an imminent threat to embryonic cell viability. It is highly recommended to isolate this water source from pregnant populations or subject it to immediate advanced nanotechnological purification.")
+                st.warning("⚠️ *Clinical Recommendation:* This bacterial strain exhibits a hyper-mutated genomic signature that poses an imminent threat to embryonic cell viability. It is highly recommended to isolate this water source from pregnant populations or subject it to immediate advanced nanotechnological purification.")
             else:
-                st.info("ℹ️ Laboratory Note: The strain shows standard genomic equilibrium and remains within safe biological thresholds. No immediate mutational danger to embryonic development is predicted.")
+                st.info("ℹ️ *Laboratory Note:* The
