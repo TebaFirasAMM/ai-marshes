@@ -2,7 +2,7 @@
 !pip install -q streamlit
 !npm install -q -g localtunnel
 
-# 2. Write the Bright Academic Code with YOUR EXCLUSIVE LOGO AND REAL DNA
+# 2. Write the Bright Academic Code with YOUR EXCLUSIVE LOGO AND REALA DNA
 with open('app.py', 'w', encoding='utf-8') as f:
     f.write('''
 import streamlit as st
