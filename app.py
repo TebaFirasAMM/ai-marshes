@@ -1,10 +1,3 @@
-# 1. Install required packages
-!pip install -q streamlit
-!npm install -q -g localtunnel
-
-# 2. Write the Bright Academic Code with YOUR EXCLUSIVE LOGO AND REALA DNA
-with open('app.py', 'w', encoding='utf-8') as f:
-    f.write('''
 import streamlit as st
 import random
 
@@ -64,15 +57,13 @@ elif selected_tab == "📊 Diagnostic Core":
     col_left, col_right = st.columns(2)
     with col_left:
         st.subheader("🧬 Microbial Genomic Input")
-        # REAL BACTERIAL DNA AUTOMATICALLY LOADED!
         real_ncbi_dna = "ATGGCGATCGATCGATCGATCGATCGATCGCGGCCAAACTTTTCTTGCCCCCCGGGTCACTTTATCAGTTAGAAACCTCTCAAAAATTTTAGGGGCGCTATTATTTTATCTGCTCAAACAATATCTGGGACGCTTTCTGGAAAGACAAGTCCAGTATGAATCAGTAATCAGTCAATACTTATGATTAGCGGCTTCCCCACAGCTGCGGCCAACAAATTCCTCCACTTCTGCCATTGCCAATCCCCAGCGTGGAAAAACATTGGACACACACACCAATTGAGTCGCGGGGAGATATTTCTCGCCCAATTTTGACGGCA"
         dna_input = st.text_area("Bacterial DNA Sequence Metadata (Bases: A, T, C, G):", value=real_ncbi_dna, height=150)
     with col_right:
         st.subheader("🤰 Maternal Clinical Parameters")
         sonar_status = st.selectbox("High-Resolution Fetal Ultrasonography Matrix:", ["Optimal & Physiological Fetal Development", "Mild Intrauterine Growth Restriction (IUGR)", "Acute Fetal Distress / Heartrate Abnormalities"])
-    biomarker_score = st.slider("Serum Inflammatory Cytokine & Biomarker Index (%):", 0, 100, 25)
-
-    st.markdown("<br>", unsafe_allow_html=True)
+        biomarker_score = st.slider("Serum Inflammatory Cytokine & Biomarker Index (%):", 0, 100, 25)
+ st.markdown("<br>", unsafe_allow_html=True)
     if st.button("⚡ EXECUTE COMPUTATIONAL INTEGRATED RISK PREDICTION"):
         dna_sequence = dna_input.strip().upper()
         if not all(char in "ATCG" for char in dna_sequence):
@@ -96,12 +87,3 @@ elif selected_tab == "📊 Diagnostic Core":
                     status_text = "🟢 PHYSIOLOGICAL STATUS: OPTIMAL"
                     st.metric("👶 Fetal Health Assessment", status_text)
                     st.info("ℹ️ PREDICTIVE PROGNOSTIC OVERVIEW: The computational analysis isolates stable environmental strains showing zero toxin hyper-expression signatures. Integrated maternal diagnostics confirm that early embryonic cellular development continues along healthy physiological trajectories.")
-''')
-
-# 3. Security Token Print Out
-import urllib.request
-ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
-print(f"👇 COPY THIS NUMBER FOR THE NEXT PAGE:\n👉 {ip} 👈\n" + "-"*50)
-
-# 4. Initialize Server Deployment
-!streamlit run app.py & npx localtunnel --port 8501
