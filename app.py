@@ -63,7 +63,7 @@ elif selected_tab == "📊 Diagnostic Core":
         st.subheader("🤰 Maternal Clinical Parameters")
         sonar_status = st.selectbox("High-Resolution Fetal Ultrasonography Matrix:", ["Optimal & Physiological Fetal Development", "Mild Intrauterine Growth Restriction (IUGR)", "Acute Fetal Distress / Heartrate Abnormalities"])
         biomarker_score = st.slider("Serum Inflammatory Cytokine & Biomarker Index (%):", 0, 100, 25)
- st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
     if st.button("⚡ EXECUTE COMPUTATIONAL INTEGRATED RISK PREDICTION"):
         dna_sequence = dna_input.strip().upper()
         if not all(char in "ATCG" for char in dna_sequence):
